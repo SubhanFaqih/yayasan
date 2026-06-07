@@ -9,18 +9,97 @@ import Link from 'next/link';
 const filters = ['Semua', 'Kegiatan Belajar', 'Acara Mabit', 'Wisuda Santri', 'Hari Besar Islam'];
 
 const photos = [
-  { id: 1, caption: 'Kelas Pra-Tahsin', category: 'Kegiatan Belajar', aspectClass: 'aspect-[4/3]', hue: '142' },
-  { id: 2, caption: 'Mabit Ramadhan 1446H', category: 'Acara Mabit', aspectClass: 'aspect-[3/4]', hue: '38' },
-  { id: 3, caption: 'Wisuda Santri Juz 30', category: 'Wisuda Santri', aspectClass: 'aspect-[4/3]', hue: '200' },
-  { id: 4, caption: 'Belajar bersama Ustadz', category: 'Kegiatan Belajar', aspectClass: 'aspect-[1/1]', hue: '142' },
-  { id: 5, caption: 'Kegiatan halaqah pagi', category: 'Kegiatan Belajar', aspectClass: 'aspect-[16/9]', hue: '160' },
-  { id: 6, caption: "Malam Nuzulul Qur'an", category: 'Hari Besar Islam', aspectClass: 'aspect-[3/4]', hue: '270' },
-  { id: 7, caption: 'Sesi Tahsin bersama', category: 'Kegiatan Belajar', aspectClass: 'aspect-[4/3]', hue: '142' },
-  { id: 8, caption: 'Penyerahan Sertifikat Hafidz', category: 'Wisuda Santri', aspectClass: 'aspect-[1/1]', hue: '45' },
-  { id: 9, caption: 'Pembukaan Pesantren Kilat', category: 'Acara Mabit', aspectClass: 'aspect-[16/9]', hue: '38' },
-  { id: 10, caption: "Peringatan Isra' Mi'raj", category: 'Hari Besar Islam', aspectClass: 'aspect-[4/3]', hue: '270' },
-  { id: 11, caption: "Muraja'ah bersama", category: 'Kegiatan Belajar', aspectClass: 'aspect-[3/4]', hue: '142' },
-  { id: 12, caption: 'Wisuda Santri Batch II', category: 'Wisuda Santri', aspectClass: 'aspect-[4/3]', hue: '200' },
+  // Kegiatan Belajar
+  {
+    id: 1,
+    caption: 'Kelas Pra-Tahsin',
+    category: 'Kegiatan Belajar',
+    aspectClass: 'aspect-[4/3]',
+    src: 'https://images.pexels.com/photos/8471939/pexels-photo-8471939.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 4,
+    caption: 'Belajar bersama Ustadz',
+    category: 'Kegiatan Belajar',
+    aspectClass: 'aspect-[1/1]',
+    src: 'https://images.pexels.com/photos/8471835/pexels-photo-8471835.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 5,
+    caption: 'Kegiatan halaqah pagi',
+    category: 'Kegiatan Belajar',
+    aspectClass: 'aspect-[16/9]',
+    src: 'https://images.pexels.com/photos/9654131/pexels-photo-9654131.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 7,
+    caption: 'Sesi Tahsin bersama',
+    category: 'Kegiatan Belajar',
+    aspectClass: 'aspect-[4/3]',
+    src: 'https://images.pexels.com/photos/9028725/pexels-photo-9028725.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 11,
+    caption: "Muraja'ah bersama",
+    category: 'Kegiatan Belajar',
+    aspectClass: 'aspect-[3/4]',
+    src: 'https://images.pexels.com/photos/9028737/pexels-photo-9028737.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+
+  // Acara Mabit
+  {
+    id: 2,
+    caption: 'Mabit Ramadhan 1446H',
+    category: 'Acara Mabit',
+    aspectClass: 'aspect-[3/4]',
+    src: 'https://images.pexels.com/photos/3646172/pexels-photo-3646172.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 9,
+    caption: 'Pembukaan Pesantren Kilat',
+    category: 'Acara Mabit',
+    aspectClass: 'aspect-[16/9]',
+    src: 'https://images.pexels.com/photos/1537086/pexels-photo-1537086.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+
+  // Wisuda Santri
+  {
+    id: 3,
+    caption: 'Wisuda Santri Juz 30',
+    category: 'Wisuda Santri',
+    aspectClass: 'aspect-[4/3]',
+    src: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 8,
+    caption: 'Penyerahan Sertifikat Hafidz',
+    category: 'Wisuda Santri',
+    aspectClass: 'aspect-[1/1]',
+    src: 'https://images.pexels.com/photos/8613312/pexels-photo-8613312.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 12,
+    caption: 'Wisuda Santri Batch II',
+    category: 'Wisuda Santri',
+    aspectClass: 'aspect-[4/3]',
+    src: 'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+
+  // Hari Besar Islam
+  {
+    id: 6,
+    caption: "Malam Nuzulul Qur'an",
+    category: 'Hari Besar Islam',
+    aspectClass: 'aspect-[3/4]',
+    src: 'https://images.pexels.com/photos/5993044/pexels-photo-5993044.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 10,
+    caption: "Peringatan Isra' Mi'raj",
+    category: 'Hari Besar Islam',
+    aspectClass: 'aspect-[4/3]',
+    src: 'https://images.pexels.com/photos/3612882/pexels-photo-3612882.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
 ];
 
 /* ─── Sub-components ─── */
@@ -59,35 +138,32 @@ function PageHero() {
 
 function PhotoCard({ photo }) {
   const [hovered, setHovered] = useState(false);
-  
+  const [imgError, setImgError] = useState(false);
+
   return (
     <div
-      className={`relative ${photo.aspectClass} overflow-hidden cursor-pointer group break-inside-avoid mb-6 border border-gray-200 bg-gray-50`}
+      className={`relative ${photo.aspectClass} overflow-hidden cursor-pointer group break-inside-avoid mb-6 border border-gray-200 bg-gray-100`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* 
-        Placeholder Image:
-        Gradient HSL tetap digunakan namun dengan saturasi dan lightness yang diubah 
-        agar terlihat pastel/abu-abu lembut (lebih elegan)
-      */}
-      <div
-        className="absolute inset-0 transition-transform duration-700 ease-in-out group-hover:scale-105"
-        style={{
-          background: `linear-gradient(135deg, hsl(${photo.hue}, 15%, 85%) 0%, hsl(${photo.hue}, 20%, 90%) 100%)`,
-        }}
-      >
-        {/* Ikon Kamera Minimalis (pengganti pattern ramai) */}
-        <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 group-hover:opacity-0">
+      {!imgError ? (
+        <img
+          src={photo.src}
+          alt={photo.caption}
+          loading="lazy"
+          onError={() => setImgError(true)}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-gray-400" strokeWidth="1.5">
             <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
             <circle cx="8.5" cy="8.5" r="1.5" />
             <polyline points="21 15 16 10 5 21" />
           </svg>
         </div>
-      </div>
+      )}
 
-      {/* Caption Overlay (Gaya Gelap Mewah) */}
       <div
         className={`absolute inset-0 bg-black/60 flex flex-col justify-end p-6 transition-opacity duration-500 ease-in-out ${hovered ? 'opacity-100' : 'opacity-0'}`}
         aria-hidden={!hovered}

@@ -76,24 +76,28 @@ const asatidz = [
     name: 'Ustadz Ahmad Fauzi, S.Pd.I',
     title: 'Kepala Program',
     credentials: ['Hafidz 30 Juz', '10 Tahun Pengalaman'],
+    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400',
   },
   {
     initial: 'NA',
     name: 'Ustadzah Nur Azizah',
     title: 'Kelas Pra-Tahsin',
     credentials: ['Spesialis Psikologi Anak', 'Usia Dini'],
+    imageUrl: 'https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?auto=format&fit=crop&q=80&w=400&h=400',
   },
   {
     initial: 'HB',
     name: 'Ustadz Hasan Basri',
     title: 'Tahsin & Tajwid',
     credentials: ['Lulusan Pesantren Tahfidz', 'Tilawati Bersanad'],
+    imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400&h=400',
   },
-  {
+{
     initial: 'MS',
     name: 'Ustadzah Maryam Sari',
     title: 'Tahfidz Cilik',
     credentials: ['Metode Muraja\'ah Kreatif', 'Hafidz 30 Juz'],
+    imageUrl: 'https://images.unsplash.com/photo-1590038767624-dac5740a997b?auto=format&fit=crop&q=80&w=400&h=400',
   },
 ];
 
@@ -185,25 +189,40 @@ export default function TentangKamiPage() {
             
           </div>
 
-          {/* Kolom Kanan: Ornamen Visual / SVG */}
-          <div className="flex items-center justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-square rounded-full border border-gray-100 bg-[#F9F9F9] flex items-center justify-center p-12 transition-transform duration-700 hover:scale-105">
-              {/* Lingkaran dalam sebagai bingkai tambahan */}
-              <div className="absolute inset-6 border border-gray-200/60 rounded-full" aria-hidden="true" />
-              
-              {/* Komponen SVG Ornamen */}
-              <div className="relative w-full h-full text-gray-300 flex items-center justify-center">
-                {/* Pastikan komponen IslamicOctagramSVG Anda dapat menerima class dari parent atau menggunakan stroke="currentColor" */}
-                {/* <IslamicOctagramSVG /> */}
-                
-                {/* Placeholder SVG jika komponen aslinya belum diimpor */}
-                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1" className="w-full h-full opacity-50">
-                  <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" />
-                  <circle cx="50" cy="50" r="20" />
-                </svg>
-              </div>
-            </div>
-          </div>
+{/* Kolom Kanan: Foto Bertumpuk */}
+<div className="flex items-center justify-center lg:justify-end">
+  <div className="relative w-full max-w-md" style={{ aspectRatio: '4/4.5' }}>
+    
+    {/* Foto besar di belakang (atas) */}
+    <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-2xl overflow-hidden shadow-md">
+      <img
+        src="https://images.pexels.com/photos/8471939/pexels-photo-8471939.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="Suasana belajar Al-Qur'an"
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    {/* Foto kecil di depan (bawah kanan, overlapping) */}
+    <div className="absolute bottom-0 right-0 w-3/5 h-3/5 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+      <img
+        src="https://images.pexels.com/photos/8471835/pexels-photo-8471835.jpeg?auto=compress&cs=tinysrgb&w=400"
+        alt="Santri membaca Al-Qur'an"
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    {/* Aksen dekoratif titik-titik */}
+    <div
+      className="absolute -bottom-4 -left-4 w-24 h-24 opacity-20"
+      style={{
+        backgroundImage: 'radial-gradient(circle, #B8860B 1.5px, transparent 1.5px)',
+        backgroundSize: '10px 10px',
+      }}
+      aria-hidden="true"
+    />
+
+  </div>
+</div>
 
         </div>
       </div>

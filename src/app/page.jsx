@@ -122,26 +122,26 @@ const programs = [
 ];
 
 export default function HomePage() {
-  const testimoni = [
-    {
-      name: "Bunda Aisyah",
-      label: "Wali Santri",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150",
-      quote: "Alhamdulillah, anak saya yang tadinya susah diajak ngaji, sekarang malah yang ngajak ke TPA duluan!"
-    },
-    {
-      name: "Ayah Rizki",
-      label: "Wali Santri",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150",
-      quote: "Gurunya sabar sekali, anak saya jadi lebih percaya diri membaca Al-Qur'an."
-    },
-    {
-      name: "Bunda Fatimah",
-      label: "Wali Santri",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150",
-      quote: "Programnya terstruktur, progress ananda bisa dipantau tiap bulan. Sangat profesional."
-    }
-  ];
+const testimoni = [
+  {
+    name: "Bunda Aisyah",
+    label: "Wali Santri",
+    avatar: "https://i.pravatar.cc/150?img=47",
+    quote: "Alhamdulillah, anak saya yang tadinya susah diajak ngaji, sekarang malah yang ngajak ke TPA duluan!"
+  },
+  {
+    name: "Ayah Rizki",
+    label: "Wali Santri",
+    avatar: "https://i.pravatar.cc/150?img=12",
+    quote: "Gurunya sabar sekali, anak saya jadi lebih percaya diri membaca Al-Qur'an."
+  },
+  {
+    name: "Bunda Fatimah",
+    label: "Wali Santri",
+    avatar: "https://i.pravatar.cc/150?img=44",
+    quote: "Programnya terstruktur, progress ananda bisa dipantau tiap bulan. Sangat profesional."
+  }
+];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
@@ -523,11 +523,11 @@ export default function HomePage() {
 
         {/* Kolom Kanan: Gambar & Play Button */}
         <div className="relative w-full h-[400px] lg:h-[600px] rounded-sm overflow-hidden group cursor-pointer">
-          <img 
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1000" 
-            alt="Office discussion" 
-            className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
-          />
+<img 
+  src="https://images.pexels.com/photos/3646172/pexels-photo-3646172.jpeg?auto=compress&cs=tinysrgb&w=1000" 
+  alt="Kegiatan Membaca Al-Qur'an" 
+  className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+/>
           
           {/* Play Button Overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
